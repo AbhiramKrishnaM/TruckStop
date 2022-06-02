@@ -4,10 +4,10 @@
       <img id="logo" :src="require('@/assets/images/logo.png')" alt="logo" />
 
       <div class="nav-links">
-        <a class="nav-link-collections">Collections</a>
-        <a class="nav-link-brands">Brands</a>
-        <a class="nav-link-new">New</a>
-        <a class="nav-link-sales">Sales</a>
+        <a href="#">Collections</a>
+        <a href="#">Brands</a>
+        <a href="#">New</a>
+        <a href="#">Sales</a>
       </div>
 
       <div id="login-signup-button" class="login-signup-button-wrapper">
@@ -55,9 +55,11 @@ export default {
   justify-content: end;
 }
 
-h1 {
-  color: white;
+a {
+  text-decoration: none;
+  color: white !important;
   font-weight: 300;
+  font-size: 20px;
   margin: 0 60px;
 }
 
