@@ -11,12 +11,8 @@
       </div>
 
       <div id="login-signup-button" class="login-signup-button-wrapper">
-        <v-btn dark fab icon plain class="mr-4" :ripple="false"
-          ><v-icon>mdi-cart</v-icon></v-btn
-        >
-        <v-btn dark fab plain outlined :ripple="false"
-          ><v-icon>mdi-truck-check</v-icon></v-btn
-        >
+        <v-btn dark fab icon plain class="mr-4" :ripple="false"><v-icon>mdi-cart</v-icon></v-btn>
+        <v-btn dark fab icon plain :ripple="false"><v-icon>mdi-truck-check</v-icon></v-btn>
       </div>
     </nav>
 
@@ -28,11 +24,11 @@
 
 <script>
 export default {
-  name: 'DefaultLayout',
+  name: "DefaultLayout",
   data() {
-    return {}
+    return {};
   },
-}
+};
 </script>
 
 <style>
@@ -52,7 +48,7 @@ export default {
   flex: 0.9;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 a {
@@ -71,6 +67,6 @@ img {
 
 .login-signup-button-wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 </style>
