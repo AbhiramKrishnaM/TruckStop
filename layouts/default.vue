@@ -4,10 +4,10 @@
       <img id="logo" :src="require('@/assets/images/logo.png')" alt="logo" />
 
       <div class="nav-links">
-        <h1 class="nav-link-collections">Collections</h1>
-        <h1 class="nav-link-brands">Brands</h1>
-        <h1 class="nav-link-new">New</h1>
-        <h1 class="nav-link-sales">Sales</h1>
+        <a class="nav-link-collections">Collections</a>
+        <a class="nav-link-brands">Brands</a>
+        <a class="nav-link-new">New</a>
+        <a class="nav-link-sales">Sales</a>
       </div>
 
       <div id="login-signup-button" class="login-signup-button-wrapper">
