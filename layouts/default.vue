@@ -1,8 +1,18 @@
 <template>
   <v-app>
-    <nav id="nav-bar" class="navigation-bar">
-      <!-- <img id="logo" :src="require('@/assets/images/logo.png')" alt="logo" /> -->
-    </nav>
+    <v-navigation-drawer v-model="drawer" app>
+      <v-list dense flat nav>
+        <v-list-item v-for="[icon, text] in links" :key="icon" link dense :ripple="false" :to="`/${text}`" color="#38B069" active-class="link-active">
+          <v-list-item-icon class="mr-3">
+            <v-icon>{{ icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ text }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
     <!-- <v-main>
       <Nuxt />
@@ -14,21 +24,28 @@
 export default {
   name: "DefaultLayout",
   data() {
-    return {};
+    return {
+      drawer: null,
+      links: [
+        ["mdi-inbox-arrow-down", "Dashboard"],
+        ["mdi-send", "Freight management"],
+        ["mdi-delete", "Tracking order"],
+        ["mdi-alert-octagon", "Carriers"],
+        ["mdi-alert-octagon", "Order history"],
+        ["mdi-alert-octagon", "Billing details"],
+        ["mdi-alert-octagon", "Settings"],
+      ],
+    };
   },
 };
 </script>
 
 <style>
 * {
-  background: #f5f5f5;
+  background: #e4eae5;
 }
 
-.navigation-bar {
-  width: 85%;
-  margin: 0.01px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.link-active {
+  border-left: 3px solid #38b069;
 }
 </style>
